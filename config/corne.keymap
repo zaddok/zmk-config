@@ -36,25 +36,25 @@
 //                                                  |     |     |    |       |  ⌘  | OPT ⌥| SHFT |
 //                                                   ----------------         -------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY &kp N7    &kp N8      &kp N9   &kp PLUS       &kp DLLR    &kp GRAVE &kp N7   &kp N8 &kp N9    &trans
-   &trans       &kp ESC         &kp N4    &kp N5      &kp N6   &kp MINUS      &kp EQUAL   &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &kp N0          &kp N1    &kp N2      &kp N3   &trans         &trans      &trans    &trans   &trans &trans    &trans
+   &trans       &kp KP_MULTIPLY &kp N7    &kp N8      &kp N9   &kp PLUS       &kp DLLR    &kp GRAVE &kp N7   &kp N8 &kp BSPC   &trans
+   &trans       &kp ESC         &kp N4    &kp N5      &kp N6   &kp MINUS      &kp EQUAL   &kp LEFT  &kp DOWN &kp UP &kp RIGHT  &trans
+   &trans       &kp N0          &kp N1    &kp N2      &kp N3   &trans         &trans      &trans    &trans   &trans &trans     &trans
                                           &none       &trans   &none          &kp RGUI    &kp RALT  &kp RSHFT
                         >;
                 };
 
                 raise_layer {
-//                                   -----------------------------       -----------------------------
-//                                  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-//                                  |  <  |  {  |  (  |  [  |  _  |     |  –  |  ]  |  )  |  }  |  >  |
-//                                  | TAB |BTCLR| BT1 | BT2 |     |     |     |     |  ?  |  !  | ESC |
-//                                   -----------------------------       -----------------------------
+//                                   -----------------------------       ------------------------------
+//                                  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |     |      |
+//                                  |  <  |  {  |  (  |  [  |  _  |     |  –  |  ]  |  )  |  }  |   >  |
+//                                  | TAB |BTCLR| BT1 | BT2 |     |     |     |     |  ?  |  !  | BSPC |
+//                                   -----------------------------       ------------------------------
 //                                              |  ⌘  |  L5 |  L4 |     |     |     |     |
 //                                               -----------------       -----------------
                         bindings = <
    &trans   &kp EXCL    &kp AT       &kp HASH      &kp DLLR      &kp PRCNT      &kp CARET     &kp AMPS   &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
-   &trans   &trans      &trans       &trans        &trans        &trans         &kp RA(MINUS) &kp EQUAL  &kp LBKT         &kp RBKT   &kp BSLH  &trans
-   &trans   &kp TAB     &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &trans         &kp UNDER     &kp PLUS   &kp LBRC         &kp RBRC   &kp ESC   &trans
+   &trans   &trans      &trans       &trans        &trans        &kp UNDER      &kp RA(MINUS) &kp RBKT   &kp RPAR         &kp RBRC   &kp GT    &trans
+   &trans   &kp TAB     &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &trans         &kp BSLH      &kp PLUS   &kp QMARK        &kp EXCL   &kp BSPC  &trans
                                      &kp LGUI      &trans        &kp SPACE      &none         &trans     &none
                         >;
                 };
