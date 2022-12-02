@@ -21,7 +21,7 @@
    &trans   &kp Q &kp W &kp E &kp R &kp T                 &kp Y &kp U  &kp I     &kp O    &kp P      &trans
    &trans   &kp A &kp S &kp D &kp F &kp G                 &kp H &kp J  &kp K     &kp L    &kp TAB    &trans
    &trans   &kp Z &kp X &kp C &kp V &kp B                 &kp N &kp M  &kp COMMA &kp DOT  &kp BSPC   &trans
-                 &kp LGUI &mo 1 &mt SPACE LC(SPACE)       &kp RET &mo 2 &kp RALT
+                 &kp LCMD &mo 1 &mt SPACE LG(SPACE)       &kp RET &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -32,10 +32,10 @@
 //     -------------------------------------       -------------------------------------
 //                    | GUI |     |    |       | ENT |     | ALT |
                         bindings = <
-   &trans       &bt BT_CLR   &kp N1       &kp N2       &kp N3   &trans        &kp DLLR    &kp GRAVE &kp N7   &kp N8 &kp N9    &trans
-   &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 3 &trans   &trans        &trans      &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &kp N7       &kp N8       &kp N9       &trans   &trans        &trans      &trans    &trans   &trans &trans    &trans 
-                          	          &kp LGUI     &trans   &kp SPACE     &kp RET   &trans   &kp RALT
+   &trans       &bt BT_CLR   &kp N1       &kp N2      &kp N3   &trans         &kp DLLR    &kp GRAVE &kp N7   &kp N8 &kp N9    &trans
+   &trans       &bt BT_SEL 0 &kp N4       &kp N5      &kp N6   &trans         &trans      &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans
+   &trans       &bt BT_SEL 1 &kp N7       &kp N8      &kp N9   &trans         &trans      &trans    &trans   &trans &trans    &trans
+                          	          &kp LCMD    &trans   &kp SPACE      &kp RET   &trans   &kp RALT
                         >;
                 };
 
@@ -50,7 +50,7 @@
    &trans   &kp EXCL &kp AT  &kp HASH  &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
    &trans   &trans   &trans  &trans    &trans   &trans         &kp MINUS &kp EQUAL &kp LBKT         &kp RBKT   &kp BSLH  &trans
    &trans   &trans   &trans  &trans    &trans   &trans         &kp UNDER &kp PLUS  &kp LBRC         &kp RBRC   &kp ESC   &trans
-                    	     &kp LGUI  &trans   &kp SPACE     &kp RET   &trans    &kp RALT
+                    	     &kp LCMD  &trans   &kp SPACE      &kp RET   &trans    &kp RALT
                         >;
                 };
         };
