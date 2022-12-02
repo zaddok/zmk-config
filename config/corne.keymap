@@ -13,26 +13,28 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-//             ------------------------------------        ----------------------------------------
-//             |    |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I  |  O  |  P   |      |
-//             |    |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K  |  L  | TAB  |      |
-//             |    |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,  |  .  | BSPC |      |
-//             ------------------------------------        ----------------------------------------
-//                              | SHFT| LWR | SPC |        | ENT | RSE  | ALT |
+//                     -------------------------------        ---------------------------------
+//                     |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I  |  O  |  P   |
+//                     |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K  |  L  | TAB  |
+//                     |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,  |  .  | BSPC |
+//                     -------------------------------        ---------------------------------
+//                                 | ALT | LWR | SPC |        | ENT | RSE  | SHFT|
+//                                 -------------------        --------------------
                         bindings = <
    &trans   &kp Q &kp W      &kp E  &kp R &kp T                 &kp Y     &kp U   &kp I      &kp O     &kp P      &trans
    &trans   &kp A &kp S      &kp D  &kp F &kp G                 &kp H     &kp J   &kp K      &kp L     &kp TAB    &trans
    &trans   &kp Z &kp X      &kp C  &kp V &kp B                 &kp N     &kp M   &kp COMMA  &kp DOT   &kp BSPC   &trans
-                  &kp LSHFT  &mo 1  &mt SPACE LG(SPACE)         &kp RET   &mo 2   &kp RALT
+                  &kp RALT   &mo 1  &mt SPACE LG(SPACE)         &kp RET   &mo 2   &kp LSHFT
                         >;
                 };
                 lower_layer {
-//             ------------------------------------       --------------------------------------
-//             |    |   *  |  7  |  8  |  9  |  + |       |  $  |  `  |  '  |  "  |  ~   |     |
-//             |    |  ESC |  4  |  5  |  6  |  - |       |  =  | LFT | DWN |  UP | RGT  |     |
-//             |    |   0  |  1  |  2  |  3  |  / |       |  \  |  |  |  ;  |  :  | BSPC |     |
-//             ------------------------------------       --------------------------------------
-//                               | GUI |     |    |       | ENT |     | ALT |
+//                                   -------------------------------       --------------------------------
+//                                   |   *  |  7  |  8  |  9  |  + |       |  $  |  `  |  '  |  "  |  ~   |
+//                                   |  ESC |  4  |  5  |  6  |  - |       |  =  | LFT | DWN |  UP | RGT  |
+//                                   |   0  |  1  |  2  |  3  |  / |       |  \  |  |  |  ;  |  :  | BSPC |
+//                                   -------------------------------       --------------------------------
+//                                                | GUI |     |    |       | ENT |     | ALT |
+//                                                ------------------       -------------------
                         bindings = <
    &trans       &kp KP_MULTIPLY &kp N1    &kp N2      &kp N3   &trans         &kp DLLR    &kp GRAVE &kp N7   &kp N8 &kp N9    &trans
    &trans       &kp ESC         &kp N4    &kp N5      &kp N6   &trans         &trans      &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans
@@ -42,12 +44,13 @@
                 };
 
                 raise_layer {
-//                  --------------------------------------     --------------------------------------
-//                  |      |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |      |
-//                  |      |  <  |  {  |  (  |  [  |  _  |     |  ]  |  )  |  }  |  >  |  \  |      |
-//                  |      |BTCLR| BT1 | BT2 |     |     |     |     |  +  |  ?  |  !  | ESC |      |
-//                  --------------------------------------     --------------------------------------
-//                                     | GUI |     | SPC |     | ENT |     | ALT |
+//                                  -------------------------------     -------------------------------
+//                                  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
+//                                  |  <  |  {  |  (  |  [  |  _  |     |  ]  |  )  |  }  |  >  |  \  |
+//                                  |BTCLR| BT1 | BT2 |     |     |     |     |  +  |  ?  |  !  | ESC |
+//                                  -------------------------------     -------------------------------
+//                                              | GUI |     | SPC |     | ENT |     | ALT |
+//                                              -------------------     -------------------
                         bindings = <
    &trans   &kp EXCL    &kp AT        &kp HASH      &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
    &trans   &trans      &trans        &trans        &trans   &trans         &kp MINUS &kp EQUAL &kp LBKT         &kp RBKT   &kp BSLH  &trans
