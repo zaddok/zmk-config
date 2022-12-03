@@ -24,7 +24,7 @@
    &trans       &kp Q &kp W      &kp E  &kp R &kp T                 &kp Y            &kp U   &kp I      &kp O     &kp P                &trans
    &trans       &kp A &kp S      &kp D  &kp F &kp G                 &kp H            &kp J   &kp K      &kp L     &kp TAB              &trans
    &trans       &kp Z &kp X      &kp C  &kp V &kp B                 &kp N            &kp M   &kp COMMA  &kp DOT   &kp BSPC             &trans
-                  &kp LALT   &mo 1  &mt SPACE LG(SPACE)         &mt RET LC(RET)  &mo 2   &kp RSHFT
+                      &kp LALT   &mo 1  &mt SPACE LG(SPACE)         &mt RET LC(RET)  &mo 2   &kp RSHFT
                         >;
                 };
                 lower_layer {
@@ -45,7 +45,7 @@
 
                 raise_layer {
 //                                     -----------------------------       ------------------------------
-//                                    |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |     |      |
+//                                    |     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |     |      |
 //                                    |  <  |  {  |  (  |  [  |  _  |     |  –  |  ]  |  )  |  }  |   >  |
 //                                    | TAB |BTCLR| BT1 | BT2 |  \  |     |     |     |  ?  |  !  | BSPC |
 //                                     -----------------------------       ------------------------------
