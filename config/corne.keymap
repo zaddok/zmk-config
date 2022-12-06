@@ -21,9 +21,9 @@
 //                                     |OPT ⌥| LWR | SPC |        | ENT | RSE  | SHFT |
 //                                      -----------------          -------------------
                         bindings = <
-   &trans       &mt LG(Q) Q &mt LG(W) W    &kp E        &kp R         &kp T                 &kp Y            &kp U   &kp I      &kp O     &kp P                &trans
-   &trans       &mt LG(A) A &mt LG(S) S    &kp D        &kp F         &kp G                 &kp H            &kp J   &kp K      &kp L     &kp TAB              &trans
-   &trans       &mt LG(Z) Z &mt LG(X) X    &mt LG(C) C  &mt LG(V) V   &kp B                 &kp N            &kp M   &kp COMMA  &kp DOT   &kp BSPC             &trans
+   &trans       &hm LG(Q) Q &hm LG(W) W    &hm LG(E) E  &kp R         &kp T                 &kp Y            &kp U   &kp I      &kp O     &kp P                &trans
+   &trans       &hm LG(A) A &hm LG(S) S    &hm LG(D) D  &kp F         &kp G                 &kp H            &kp J   &kp K      &kp L     &kp TAB              &trans
+   &trans       &hm LG(Z) Z &hm LG(X) X    &hm LG(C) C  &mt LG(V) V   &kp B                 &kp N            &kp M   &kp COMMA  &kp DOT   &kp BSPC             &trans
                             &kp LALT       &mo 1        &mt LG(SPACE) SPACE                 &mt RET LC(RET)  &mo 2   &kp RSHFT
                         >;
                 };
