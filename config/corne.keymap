@@ -38,7 +38,7 @@
                         bindings = <
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &kp RCTRL                                        &trans
-   &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   &kp COMMA  &kp DOT   &kp BSPC                                         &trans
+   &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
                               &kp LALT   &mo 1   AS(SPACE)             AS(RET)  &mo 2   &kp RSHFT
                         >;
                 };
@@ -51,10 +51,10 @@
 //                                                  |     |     |    |       |  ⌘  | OPT ⌥| SHFT |
 //                                                   ----------------         -------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY &kp N7    &kp N8      &kp N9   &kp PLUS       &kp DLLR    &kp GRAVE &kp SQT   &kp DQT   &kp TILDE                             &trans
-   &trans       &kp ESC         &kp N4    &kp N5      &kp N6   &kp MINUS      &kp SPACE   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                             &trans
-   &trans       &kp N0          &kp N1    &kp N2      &kp N3   &kp EQUAL      &kp SLASH   &kp PIPE  &kp SEMI  &kp COLON &kp BSPC                              &trans
-                                          &none       &trans   &none          &kp RGUI    &kp RALT  &kp RCTRL
+   &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &kp GRAVE &kp SQT   &kp DQT   &kp TILDE                             &trans
+   &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                             &trans
+   &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp PIPE  &kp SEMI  &kp COLON &kp BSPC                              &trans
+                                        &none   &trans   &none          &kp RGUI    &kp RALT  &kp RCTRL
                         >;
                 };
 
