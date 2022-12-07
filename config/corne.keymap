@@ -54,7 +54,7 @@
    &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &kp GRAVE &kp SQT   &kp DQT   &kp TILDE                             &trans
    &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                             &trans
    &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp PIPE  &kp SEMI  &kp COLON &kp BSPC                              &trans
-                                        &none   &trans   &none          &kp RGUI    &kp RALT  &kp RCTRL
+                                        &none   &trans   &none          &kp RGUI    &kp RALT  &kp RSHFT
                         >;
                 };
 
@@ -62,7 +62,7 @@
 //                                     -----------------------------       ------------------------------
 //                                    |  `  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |     | F15  |
 //                                    |  <  |  {  |  (  |  [  |  _  |     |  –  |  ]  |  )  |  }  |   >  |
-//                                    | TAB |BTCLR| BT1 | BT2 | BT3 |     |  \  |     |  ?  |  !  | BSPC |
+//                                    | TAB | BT1 | BT2 | BT3 |BTCLR|     |  \  |     |  ?  |  !  | BSPC |
 //                                     -----------------------------       ------------------------------
 //                                                |  ⌘  |  L5 |  L4 |     |     |     |     |
 //                                                 -----------------       -----------------
