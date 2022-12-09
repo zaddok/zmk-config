@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/*
+ * TESTS:
+ *   cmd-shift 3    screen capture
+ *   cmd-shift 4    screen box capture
+ *   hold-cmd tab   app switch
+ *   hold-cmd `     window switch
+ *   ctrl-c         terminal clear line
+ *   shift-down     select line/character
+ *   cmd-shift-right  highlight to end of line  ???? TBC
+ */
+
+
 #define AS(keycode) &hm LG(keycode) keycode     // Autoshift Macro
 
 / {
@@ -43,34 +55,34 @@
                         >;
                 };
                 lower_layer {
-//                                      -----------------------------         --------------------------------
-//                                     |   *  |  7  |  8  |  9  |  + |       |  $  |  `   |  '   |  "  |  ~   |
-//                                     |  ESC |  4  |  5  |  6  |  - |       | SPC | LFT  | DWN  |  UP | RGT  |
-//                                     |   0  |  1  |  2  |  3  |  = |       |  /  |  |   |  ;   |  :  | BSPC |
-//                                      -----------------------------         --------------------------------
-//                                                  |     |     |    |       |  ⌘  | OPT ⌥| SHFT |
+//                                      -----------------------------         ---------------------------------
+//                                     |   *  |  7  |  8  |  9  |  + |       |  $  | BT1  | BT2  | BT3  | BTCLR|
+//                                     |  ESC |  4  |  5  |  6  |  - |       | SPC |  "  ῾|  '  ᾽|   `  |  ~   |
+//                                     |   0  |  1  |  2  |  3  |  = |       |  /  |  ]  `|  ;  ´|  :  ¨| BSPC |
+//                                      -----------------------------         ---------------------------------
+//                                                  |     |     |    |       |  L4 |   ⌘  |  L5  |
 //                                                   ----------------         -------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &kp GRAVE &kp SQT   &kp DQT   &kp TILDE                             &trans
-   &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                             &trans
-   &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp PIPE  &kp SEMI  &kp COLON &kp BSPC                              &trans
-                                        &none   &trans   &none          &kp RGUI    &kp RALT  &kp RSHFT
+   &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR                            &trans
+   &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE                             &trans
+   &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC                              &trans
+                                        &none   &trans   &none          &none       &kp RGUI       &none
                         >;
                 };
 
                 raise_layer {
-//                                     -----------------------------       ------------------------------
-//                                    |  `  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |     | F15  |
-//                                    |  <  |  {  |  (  |  [  |  _  |     |  –  |  ]  |  )  |  }  |   >  |
-//                                    | TAB | BT1 | BT2 | BT3 |BTCLR|     |  \  |     |  ?  |  !  | BSPC |
-//                                     -----------------------------       ------------------------------
-//                                                |  ⌘  |  L5 |  L4 |     |     |     |     |
-//                                                 -----------------       -----------------
+//                                     -------------------------------      --------------------------------
+//                                    |  %  |  @   |  #  | $   |     |     |  ^  |  &   | TAB |  `   | F15  |
+//                                    |  <  |  {  ι|  (  | [  ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
+//                                    |  >  |  }  `|  )  | ]  `| SHFT|     |  \  |  |   |  ?  |  !   | BSPC |
+//                                     -------------------------------       --------------------------------
+//                                                 |OPT ⌥|  ⌘  |     |     |     |      |     |
+//                                                  ------------------      ------------------
                         bindings = <
-   &trans   &kp GRAVE   &kp AT       &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS   &kp KP_MULTIPLY  &kp LPAR   &kp F15                &trans
-   &trans   &kp LT      &kp LBRC     &kp LPAR      &kp LBKT      &kp UNDER         &kp RA(MINUS) &kp RBKT   &kp RPAR         &kp RBRC   &kp GT                 &trans
-   &trans   &kp TAB     &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &kp BSLH      &kp PLUS   &kp QMARK        &kp EXCL   &kp BSPC               &trans
-                                     &kp LGUI      &trans        &kp SPACE         &none         &trans     &none
+   &trans     &kp PRCNT   &kp AT      &kp HASH    &kp DLLR    &none             &kp CARET     &kp AMPS   &kp TAB      &kp GRAVE  &kp F15                &trans
+   &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LFT    &kp DWN      &kp UP     &kp RGT                &trans
+   &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp SHFT          &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC               &trans
+                                      &kp LALT    &kp LGUI    &none             &none         &none      &none
                         >;
                 };
         };
