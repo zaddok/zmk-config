@@ -27,6 +27,12 @@
 
 #define AS(keycode) &hm LG(keycode) keycode     // Autoshift Macro
 
+&lt {
+	quick-tap-ms = <150>;
+	global-quick-tap;
+
+};
+
 / {
 
         behaviors {
