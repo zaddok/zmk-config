@@ -76,7 +76,7 @@
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-               &kp LALT   &lt LOWER SPACE   &mt LGUI SPACE          &bhm RGUI RET  &lt RAISE SPACE &kp RSHFT
+                &kp LALT   &lt LOWER SPACE   &bhm LGUI SPACE           &bhm RGUI RET  &lt RAISE SPACE &mt RSHFT TAB
                         >;
                 };
                 lower_layer {
