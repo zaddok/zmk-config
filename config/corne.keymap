@@ -50,9 +50,9 @@
 //                                           -----------------          -------------------
                         bindings = <
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
-   &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &kp RCTRL                                        &trans
+   &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-                              &kp LALT   &mo 1   AS(SPACE)             AS(RET)  &mo 2   &kp RSHFT
+                              &kp LALT   &mo 1   &ht_hp LGUI SPACE     &ht_hp RGUI RET  &mo 2   &kp RSHFT
                         >;
                 };
                 lower_layer {
