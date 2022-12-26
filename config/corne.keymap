@@ -65,18 +65,20 @@
 
                 default_layer {
 			label = "default";
-//                               -----------------------------          --------------------------------
-//                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P   |
-//                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  | CTRL |
-//                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC |
-//                               -----------------------------          --------------------------------
+//                               -----------------------------          ----------------------------------
+//                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P     |
+//                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
+//                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC   |
+//                               -----------------------------          ----------------------------------
 //                                          |OPT ⌥| LWR | SPC |        | ENT | RSE  | SHFT |
+//                                           -----------------          -------------------
+//                                          | BSPC| SPC | SPC |        | ENT | SPC  | TAB  |
 //                                           -----------------          -------------------
                         bindings = <
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-                &kp LALT   &lt LOWER SPACE   &bhm LGUI SPACE           &bhm RGUI RET  &lt RAISE SPACE &mt RSHFT TAB
+            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE           &bhm RGUI RET  &lt RAISE SPACE &mt RSHFT TAB
                         >;
                 };
                 lower_layer {
