@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+
+
 /*
  * TESTS:
  *   cmd-shift 3    screen capture
@@ -59,6 +64,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+			label = "default";
 //                               -----------------------------          --------------------------------
 //                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P   |
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  | CTRL |
@@ -70,10 +76,11 @@
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-                              &kp LALT   &mo 1   &bhm LGUI SPACE       &bhm RGUI RET  &mo 2   &kp RSHFT
+               &kp LALT   &lt LOWER SPACE   &mt LGUI SPACE          &bhm RGUI RET  &lt RAISE SPACE &kp RSHFT
                         >;
                 };
                 lower_layer {
+			label = "num";
 //                                      -----------------------------         ---------------------------------
 //                                     |   *  |  7  |  8  |  9  |  + |       |  $  | BT1  | BT2  | BT3  | BTCLR|
 //                                     |  ESC |  4  |  5  |  6  |  - |       | SPC |  "  ῾|  '  ᾽|   `  |  ~   |
@@ -90,6 +97,7 @@
                 };
 
                 raise_layer {
+			label = "nav";
 //                                     -----------------------------       --------------------------------
 //                                    |  %  |  @  |  #  |  $  |     |     |  ^  |  &   | TAB |  `   | F15  |
 //                                    |  <  |  { ι|  (  |  [ ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
