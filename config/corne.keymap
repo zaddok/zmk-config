@@ -94,7 +94,7 @@
    &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR                            &trans
    &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE                             &trans
    &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC                              &trans
-                                        &none   &trans   &none          &none       &kp RGUI     &none
+                                        &none   &trans   &none          &bhm RGUI SPACE  &bhm RGUI SPACE  &none
                         >;
                 };
 
@@ -111,7 +111,7 @@
    &trans     &kp PRCNT   &kp AT      &kp HASH    &kp DLLR    &none             &kp CARET     &kp AMPS   &kp TAB      &kp GRAVE  &kp F15                &trans
    &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT              &trans
    &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC               &trans
-                                      &kp LALT    &kp LGUI    &none             &none         &none      &none
+                            &kp LALT   &bhm LGUI SPACE  &bhm LGUI SPACE          &none         &none      &none
                         >;
                 };
         };
