@@ -43,6 +43,15 @@
                 flavor = "hold-preferred";
                 bindings = <&kp>, <&kp>;
             };
+            bhm: balanced_homerow_mods {
+		compatible = "zmk,behavior-hold-tap";
+		label = "thumb_hold";
+		#binding-cells = <2>;
+		tapping-term-ms = <200>;
+		quick-tap-ms = <0>;
+		flavor = "balanced";
+		bindings = <&kp>, <&kp>;
+            };
         };
 
         keymap {
@@ -60,7 +69,7 @@
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-                              &kp LALT   &mo 1   &ht_hp LGUI SPACE     &ht_hp RGUI RET  &mo 2   &kp RSHFT
+                              &kp LALT   &mo 1   &bhm LGUI SPACE       &bhm RGUI RET  &mo 2   &kp RSHFT
                         >;
                 };
                 lower_layer {
