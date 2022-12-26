@@ -48,7 +48,8 @@
 		label = "thumb_hold";
 		#binding-cells = <2>;
 		tapping-term-ms = <200>;
-		quick-tap-ms = <0>;
+		quick-tap-ms = <80>;
+		global-quick-tap;
 		flavor = "balanced";
 		bindings = <&kp>, <&kp>;
             };
