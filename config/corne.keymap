@@ -76,31 +76,33 @@
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
 //                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC   |
 //                               -----------------------------          ----------------------------------
-//                                          |OPT ⌥| LWR | SPC |        | ENT | RSE  | SHFT |
+//                                          |OPT ⌥| NUM |  ⌘  |        |  ⌘  | NAV  |SHFT ⇧|
 //                                           -----------------          -------------------
-//                                          | BSPC| SPC | SPC |        | ENT | SPC  | TAB  |
+//                                          |BSPC⌫|SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
    &trans       AS(Q)  AS(W)  AS(E)      AS(R)   AS(T)                 AS(Y)    AS(U)   AS(I)      AS(O)     AS(P)                                            &trans
    &trans       AS(A)  AS(S)  AS(D)      AS(F)   AS(G)                 AS(H)    AS(J)   AS(K)      AS(L)     &ht_hp RCTRL ESC                                 &trans
    &trans       AS(Z)  AS(X)  AS(C)      AS(V)   AS(B)                 AS(N)    AS(M)   AS(COMMA)  AS(DOT)   &kp BSPC                                         &trans
-            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE           &bhm RGUI RET  &lt RAISE SPACE &mt RSHFT TAB
+            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE           &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
                 lower_layer {
 			label = "num";
-//                                      -----------------------------         ---------------------------------
-//                                     |   *  |  7  |  8  |  9  |  + |       |  $  | BT1  | BT2  | BT3  | BTCLR|
-//                                     |  ESC |  4  |  5  |  6  |  - |       | SPC |  "  ῾|  '  ᾽|   `  |  ~   |
-//                                     |   0  |  1  |  2  |  3  |  = |       |  /  |  ]  `|  ;  ´|  :  ¨| BSPC |
-//                                      -----------------------------         ---------------------------------
-//                                                  |     |     |    |       |  L4 |   ⌘  |  L5  |
-//                                                   ----------------         -------------------
+//                                      -----------------------------         ----------------------------------
+//                                     |   *  |  7  |  8  |  9  |  + |       |  $   | BT1  | BT2  | BT3  | BTCLR|
+//                                     |   /  |  4  |  5  |  6  |  - |       | SPC  |  "  ῾|  '  ᾽|   `  |  ~   |
+//                                     |   0  |  1  |  2  |  3  |  = |       | SHFT |  ]  `|  ;  ´|  :  ¨| BSPC |
+//                                      -----------------------------         ----------------------------------
+//                                                  |     |     |    |       |   ⌘  |   ⌘  |SHFT ⇧|
+//                                                   ----------------         --------------------
+//                                                  |     |     |    |       | SPC ␣||RET ⏎| TAB ⇥|
+//                                                   ----------------         --------------------
                         bindings = <
    &trans       &kp KP_MULTIPLY AS(N7)  AS(N8)  AS(N9)   &kp PLUS       &kp DLLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR                            &trans
-   &trans       &kp ESC         AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE                             &trans
-   &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp SLASH   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC                              &trans
-                                        &none   &trans   &none          &bhm RGUI SPACE  &bhm RGUI SPACE  &none
+   &trans       &kp SLASH       AS(N4)  AS(N5)  AS(N6)   &kp MINUS      &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE                             &trans
+   &trans       AS(N0)          AS(N1)  AS(N2)  AS(N3)   &kp EQUAL      &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC                              &trans
+                                        &none   &trans   &none          &bhm RGUI SPACE  &bhm RGUI RET  &mt RSHFT TAB
                         >;
                 };
 
@@ -111,13 +113,15 @@
 //                                    |  <  |  { ι|  (  |  [ ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
 //                                    |  >  |  } `|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | BSPC |
 //                                     -----------------------------       --------------------------------
-//                                                |OPT ⌥|  ⌘  |     |     |     |      |     |
+//                                                |OPT ⌥|SHFT⇧|  ⌘  |     |     |      |     |
+//                                                 -----------------       ------------------
+//                                                |BSPC⌫|SPC ␣|SPC ␣|     |     |      |     |
 //                                                 -----------------       ------------------
                         bindings = <
    &trans     &kp PRCNT   &kp AT      &kp HASH    &kp DLLR    &none             &kp CARET     &kp AMPS   &kp TAB      &kp GRAVE  &kp F15                &trans
    &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT              &trans
    &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC               &trans
-                            &kp LALT   &bhm LGUI SPACE  &bhm LGUI SPACE          &none         &none      &none
+                        &mt LALT BSPC  &bhm LSHFT SPACE  &bhm LGUI SPACE         &none         &none      &none
                         >;
                 };
         };
