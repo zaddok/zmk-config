@@ -82,9 +82,9 @@
 //                                          |BSPC⌫|SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
-   &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I       &kp O     &kp P                                            &trans
-   &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K       &kp L     &ht_hp RCTRL ESC                                 &trans
-   &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &kp COMMA   &kp DOT   &kp BSPC                                         &trans
+   &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I       &kp O     &kp P                                 &trans
+   &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K       &kp L     &ht_hp RCTRL ESC                      &trans
+   &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &kp COMMA   &kp DOT   &kp BSPC                              &trans
             &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE             &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
@@ -100,9 +100,9 @@
 //                                                  |     |     |    |       | SPC ␣||RET ⏎| TAB ⇥|
 //                                                   ----------------         --------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY &kp N7  &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none         &none                                 &trans
-   &trans       &kp SLASH       &kp N4  &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE                             &trans
-   &trans       &kp N0          &kp N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC                              &trans
+   &trans       &kp KP_MULTIPLY &kp N7  &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none         &none                 &trans
+   &trans       &kp SLASH       &kp N4  &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE             &trans
+   &trans       &kp N0          &kp N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC              &trans
                                         &none   &trans   &none            &bhm RGUI SPACE  &lt MGR RET  &mt RSHFT TAB
                         >;
                 };
@@ -134,10 +134,10 @@
 //                                    | BTCLR |  BT1 | BT2 | BT3`|     |     |     |   +  |  -  |  +   |  -   |
 //                                     --------------------------------     ----------------------------------
                         bindings = <
-   &trans     &none       &none       &none       &none       &none             &none    &none          &none            &none             &none              &trans
-   &trans     &none       &BT_SEL 3   &BT_SEL 4   &kp LBKT    &none             &none    &none          &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT         &trans
-   &trans     &BT_CLR     &BT_SEL 0   &BT_SEL 1   &BT_SEL 2   &none             &none    &kp C_VOL_UP   &kp C_VOL_DOWN   &kp C_BRI_UP      &kp C_BRI_DOWN     &trans
-                                      &none       &none       &none             &none    &none          &none
+   &trans     &none       &none          &none          &none         &none         &none    &none          &none            &none             &none              &trans
+   &trans     &none       &bt BT_SEL 3   &bt BT_SEL 4   &kp LBKT      &none         &none    &none          &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT         &trans
+   &trans     &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &none         &none    &kp C_VOL_UP   &kp C_VOL_DOWN   &kp C_BRI_UP      &kp C_BRI_DOWN     &trans
+                                         &none          &none         &none         &none    &none          &none
                         >;
                 };
 
