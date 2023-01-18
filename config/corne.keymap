@@ -110,7 +110,7 @@
                 nav_layer {
 			label = "nav";
 //                                     -----------------------------       --------------------------------
-//                                    |  %  |  @  |  #  |  $  |     |     |  ^  |  &   | TAB |  `   | F15  |
+//                                    |  ~  |  @  |  #  |  $  |  %  |     |  ^  |  &   | TAB |  ⌘`  | ⌘⇧`  |
 //                                    |  <  |  { ι|  (  |  [ ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
 //                                    |  >  |  } `|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | BSPC |
 //                                     -----------------------------       --------------------------------
@@ -119,9 +119,9 @@
 //                                                |BSPC⌫|SPC ␣|SPC ␣|     |     |      |     |
 //                                                 -----------------       ------------------
                         bindings = <
-   &trans     &kp PRCNT   &kp AT      &kp HASH    &kp DLLR    &none             &kp CARET     &kp AMPS   &kp TAB      &kp GRAVE  &kp F15                &trans
-   &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT              &trans
-   &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC               &trans
+   &trans     &kp TILDE   &kp AT      &kp HASH    &kp DLLR    &kb PRCNT         &kp CARET     &kp AMPS   &kp TAB      &kp LA(GRAVE)  &kp LA(LS(GRAVE))    &trans
+   &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT                &trans
+   &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC                 &trans
                         &mt LALT BSPC  &bhm LSHFT SPACE  &bhm LGUI SPACE         &none         &none      &none
                         >;
                 };
