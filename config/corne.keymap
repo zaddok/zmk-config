@@ -65,6 +65,20 @@
 		flavor = "balanced";
 		bindings = <&kp>, <&kp>;
             };
+		dcc: dot_colon {
+			compatible = "zmk,behavior-mod-morph";
+			label = "DOT_COLON";
+			#binding-cells = <0>;
+			bindings = <&kp DOT>, <&kp COLON>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		csc: comma_semi {
+			compatible = "zmk,behavior-mod-morph";
+			label = "COMMA_SEMI";
+			#binding-cells = <0>;
+			bindings = <&kp COMMA>, <&kp SEMI>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
         };
 
         keymap {
@@ -82,10 +96,10 @@
 //                                          |BSPC⌫|SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
-   &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I       &kp O     &kp P                                 &trans
-   &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K       &kp L     &ht_hp RCTRL ESC                      &trans
-   &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &kp COMMA   &kp DOT   &kp BSPC                              &trans
-            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE             &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
+   &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O       &kp P                                 &trans
+   &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L       &ht_hp RCTRL ESC                      &trans
+   &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &dot_colon  &kp BSPC                              &trans
+            &mt LALT BSPC &bhm LOWER SPACE   &bhm LGUI SPACE         &bhm RGUI SPACE  &bhm RAISE RET &mt RSHFT TAB
                         >;
                 };
                 num_layer {
