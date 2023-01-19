@@ -30,7 +30,7 @@
 
 &lt {
 	quick-tap-ms = <150>;
-	global-quick-tap;
+#	global-quick-tap;
 
 };
 
@@ -99,7 +99,7 @@
    &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O       &kp P                                 &trans
    &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L       &ht_hp RCTRL ESC                      &trans
    &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &dot_colon  &kp BSPC                              &trans
-            &mt LALT BSPC &bhm LOWER SPACE   &bhm LGUI SPACE         &bhm RGUI SPACE  &bhm RAISE RET &mt RSHFT TAB
+            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE         &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
                 num_layer {
