@@ -30,9 +30,8 @@
 
 &lt {
 	quick-tap-ms = <150>;
-#	global-quick-tap;
-
 };
+//	global-quick-tap;
 
 / {
 
