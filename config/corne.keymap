@@ -88,17 +88,17 @@
 //                               -----------------------------          ----------------------------------
 //                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P     |
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
-//                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC   |
+//                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC ⌫ |
 //                               -----------------------------          ----------------------------------
 //                                          |OPT ⌥| NUM |  ⌘  |        |  ⌘  | NAV  |SHFT ⇧|
 //                                           -----------------          -------------------
 //                                          |BSPC⌫|SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
-   &trans       &kp Q    &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O       &kp P                                 &trans
-   &trans       &kp A    &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L       &ht_hp RCTRL ESC                      &trans
-   &trans       &kp Z    &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &dot_colon  &kp BSPC                              &trans
-            &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE         &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
+   &trans       &kp Q         &kp W    &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O       &kp P                             &trans
+   &trans       &kp A         &kp S    &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L       &bhm RCTRL ESC                    &trans
+   &trans       &bhm LSHFT Z  &kp X    &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &dot_colon  &bhm RSHFT BSPC                   &trans
+                  &mt LALT BSPC &lt LOWER SPACE   &bhm LGUI SPACE         &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
                 num_layer {
@@ -106,16 +106,16 @@
 //                                      -----------------------------         ----------------------------------
 //                                     |   *  |  7  |  8  |  9  |  + |       |  $   |     ·|      |      |      |
 //                                     |   /  |  4  |  5  |  6  |  - |       | SPC  |  "  ῾|  '  ᾽|   `  |  ~   |
-//                                     |   0  |  1  |  2  |  3  |  = |       | SHFT |  ]  `|  ;  ´|  :  ¨| BSPC |
+//                                     |   0  |  1  |  2  |  3  |  = |       | SHFT |  ]  `|  ;  ´|  :  ¨| BSPC⌫|
 //                                      -----------------------------         ----------------------------------
 //                                                  |     |     |    |       |   ⌘  | MGR  |SHFT ⇧|
 //                                                   ----------------         --------------------
 //                                                  |     |     |    |       | SPC ␣||RET ⏎| TAB ⇥|
 //                                                   ----------------         --------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY &kp N7  &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none         &none                 &trans
-   &trans       &kp SLASH       &kp N4  &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE             &trans
-   &trans       &kp N0          &kp N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &kp BSPC              &trans
+   &trans       &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none         &none                 &trans
+   &trans       &kp SLASH        &kp N4  &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE             &trans
+   &trans       &bhm LSHFT N0    &kp N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &bhm RSHFT BSPC       &trans
                                         &none   &trans   &none            &bhm RGUI SPACE  &lt MGR RET  &mt RSHFT TAB
                         >;
                 };
@@ -125,16 +125,16 @@
 //                                     -----------------------------       --------------------------------
 //                                    |  ~  |  @  |  #  |  $  |  %  |     |  ^  |  &   | TAB |  ⌘`  | ⌘⇧`  |
 //                                    |  <  |  { ι|  (  |  [ ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
-//                                    |  >  |  } `|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | BSPC |
+//                                    |  >  |  } `|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | BSPC⌫|
 //                                     -----------------------------       --------------------------------
 //                                                |OPT ⌥|SHFT⇧|  ⌘  |     |     |      |     |
 //                                                 -----------------       ------------------
 //                                                |BSPC⌫|SPC ␣|SPC ␣|     |     |      |     |
 //                                                 -----------------       ------------------
                         bindings = <
-   &trans     &kp TILDE   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT         &kp CARET     &kp AMPS   &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
-   &trans     &kp LT      &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT                &trans
-   &trans     &kp GT      &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &kp BSPC                 &trans
+   &trans     &kp TILDE      &kp AT      &kp HASH    &kp DLLR    &kp PRCNT         &kp CARET     &kp AMPS   &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
+   &trans     &kp LT         &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT                &trans
+   &trans     &bhm LSHFT GT  &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &bhm RSHFT BSPC          &trans
                         &mt LALT BSPC  &bhm LSHFT SPACE  &bhm LGUI SPACE         &none         &none      &none
                         >;
                 };
@@ -142,14 +142,14 @@
                 mgr_layer {
 			label = "mgr";
 //                                     --------------------------------       --------------------------------
-//                                    |       |      |     |     |     |     |     |      |     |  `   |      |
-//                                    |       |  BT4ι| BT5 |    ῀|     |     |     |      |  ⏮  |  ⏯   |  ⏭   |
-//                                    | BTCLR |  BT1 | BT2 | BT3`|     |     |     |   +  |  -  |  +   |  -   |
+//                                    |       |      |     |     |     |     |BTCLR| BT1  | BT2 | BT3  | BT4  |
+//                                    |       |      |     |     |     |     |     |      |  ⏮  |  ⏯   |  ⏭   |
+//                                    |       |      |     |     |     |     |     |   +  |  -  |  +   |  -   |
 //                                     --------------------------------       --------------------------------
                         bindings = <
-   &trans     &none       &none          &none          &none         &none         &none    &none        &none         &kp C_BRI_DN      &kp C_BRI_UP       &trans
-   &trans     &none       &bt BT_SEL 3   &bt BT_SEL 4   &none         &none         &none    &none        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT         &trans
-   &trans     &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &none         &none    &none        &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP       &trans
+   &trans     &none       &none          &none          &none         &none         &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2   &bt BT_SEL 3   &trans
+   &trans     &none       &bt BT_SEL 3   &bt BT_SEL 4   &none         &none         &kp C_BRI_UP   &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT     &none          &trans
+   &trans     &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &none         &kp C_BRI_DN   &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP   &none          &trans
                                          &none          &none         &none         &none    &none   &none
                         >;
                 };
