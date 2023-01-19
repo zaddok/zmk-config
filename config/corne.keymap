@@ -65,14 +65,14 @@
 		flavor = "balanced";
 		bindings = <&kp>, <&kp>;
             };
-		dcc: dot_colon {
+		dot_colon: dot_colon {
 			compatible = "zmk,behavior-mod-morph";
 			label = "DOT_COLON";
 			#binding-cells = <0>;
 			bindings = <&kp DOT>, <&kp COLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		csc: comma_semi {
+		comma_semi: comma_semi {
 			compatible = "zmk,behavior-mod-morph";
 			label = "COMMA_SEMI";
 			#binding-cells = <0>;
