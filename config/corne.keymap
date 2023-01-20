@@ -100,7 +100,7 @@
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
 //                              |  Z ⇧|  X ⌘|  C  |  V  |  B  |        |  N  |  M   |  ,   |  . ⌘|   ⌫   ⇧|
 //                               -----------------------------          ----------------------------------
-//                                          | NUM |SPC ␣|OPT ⌥|        |  ⌘  | NAV  |SHFT ⇧|
+//                                          | NUM |SPC ␣|OPT ⌥|        |  ⌘  | NAV  | NAV  |
 //                                           -----------------          -------------------
 //                                          | NUM |SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
@@ -108,7 +108,7 @@
    &trans       &kp Q         &kp W         &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O          &kp P                        &trans
    &trans       &kp A         &kp S         &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L          &bhm RCTRL ESC               &trans
    &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &ht_dc RGUI 0  &bhm RSHFT BSPC              &trans
-                                 &mo LOWER   &kp SPACE  &mt LALT BSPC        &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
+                                 &mo LOWER   &kp SPACE  &mt LALT BSPC        &bhm RGUI SPACE  &lt RAISE RET &lt RAISE TAB
                         >;
                 };
                 num_layer {
@@ -116,7 +116,7 @@
 //                                      -----------------------------         ----------------------------------
 //                                     |   *  |  7  |  8  |  9  |  + |       |  $   |     ·|      |      |      |
 //                                     |   /  |  4  |  5  |  6  |  - |       | SPC  |  "  ῾|  '  ᾽|   `  |  ~   |
-//                                     |   0  |  1  |  2  |  3  |  = |       | SHFT |  ]  `|  ;  ´|  :  ¨| BSPC⌫|
+//                                     |   0 ⇧|  1 ⌘|  2  |  3  |  = |       | SHFT |  ]  `|  ;  ´|  :  ¨|  ⌫  ⇧|
 //                                      -----------------------------         ----------------------------------
 //                                                  |     |     |    |       |   ⌘  | MGR  |SHFT ⇧|
 //                                                   ----------------         --------------------
@@ -135,9 +135,9 @@
 //                                     -----------------------------       --------------------------------
 //                                    |  ~  |  @  |  #  |  $  |  %  |     |  ^  |  &   | TAB |  ⌘`  | ⌘⇧`  |
 //                                    |  <  |  { ι|  (  |  [ ῀|  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
-//                                    |  >  |  } `|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | BSPC⌫|
+//                                    |  > ⇧|  } ⌘|  )  |  ] `|SHFT |     |  \  |  |   |  ?  |  !   | ⌫   ⇧|
 //                                     -----------------------------       --------------------------------
-//                                                |OPT ⌥|SHFT⇧|  ⌘  |     |     |      |     |
+//                                                |OPT ⌥| MGR |  ⌘  |     |     |      |     |
 //                                                 -----------------       ------------------
 //                                                |BSPC⌫|SPC ␣|SPC ␣|     |     |      |     |
 //                                                 -----------------       ------------------
@@ -145,7 +145,7 @@
    &trans     &kp TILDE      &kp AT      &kp HASH    &kp DLLR    &kp PRCNT         &kp CARET     &kp AMPS   &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
    &trans     &kp LT         &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT                &trans
    &trans     &bhm LSHFT GT  &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &bhm RSHFT BSPC          &trans
-                        &mt LALT BSPC  &bhm LSHFT SPACE  &bhm LGUI SPACE         &none         &none      &none
+                               &mt LALT BSPC  &lt MGR SPACE  &bhm LGUI SPACE         &none         &none      &none
                         >;
                 };
 
