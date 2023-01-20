@@ -64,7 +64,6 @@
 		flavor = "balanced";
 		bindings = <&kp>, <&kp>;
             };
-/*
 		dot_colon: dot_colon {
 			compatible = "zmk,behavior-mod-morph";
 			label = "DOT_COLON";
@@ -72,13 +71,18 @@
 			bindings = <&kp DOT>, <&kp COLON>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-*/
 		comma_semi: comma_semi {
 			compatible = "zmk,behavior-mod-morph";
 			label = "COMMA_SEMI";
 			#binding-cells = <0>;
 			bindings = <&kp COMMA>, <&kp SEMI>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		ht_mm_dc: holdtap_modmorph_dotcolon {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOLDTAP_MODMORPH_DOTCOLON";
+			#binding-cells = <2>;
+			bindings = <&kp>, <&dot_colon>;
 		};
         };
 
@@ -97,9 +101,9 @@
 //                                          | NUM |SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
-   &trans       &kp Q         &kp W         &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O          &kp P                             &trans
-   &trans       &kp A         &kp S         &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L          &bhm RCTRL ESC                    &trans
-   &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &bhm RGUI DOT  &bhm RSHFT BSPC                   &trans
+   &trans       &kp Q         &kp W         &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O          &kp P                        &trans
+   &trans       &kp A         &kp S         &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L          &bhm RCTRL ESC               &trans
+   &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &ht_dc RGUI 0  &bhm RSHFT BSPC              &trans
                                  &mo LOWER   &kp SPACE  &mt LALT BSPC        &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
