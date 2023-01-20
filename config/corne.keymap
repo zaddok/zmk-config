@@ -78,7 +78,7 @@
 			bindings = <&kp COMMA>, <&kp SEMI>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		ht_mm_dc: holdtap_modmorph_dotcolon {
+		ht_dc: holdtap_modmorph_dotcolon {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOLDTAP_MODMORPH_DOTCOLON";
 			#binding-cells = <2>;
