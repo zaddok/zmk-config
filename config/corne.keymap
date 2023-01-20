@@ -90,17 +90,17 @@
 //                               -----------------------------          ----------------------------------
 //                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P     |
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
-//                              |  Z  |  X  |  C  |  V  |  B  |        |  N  |  M   |  ,   |  .  | BSPC ⌫ |
+//                              |  Z ⇧|  X ⌘|  C  |  V  |  B  |        |  N  |  M   |  ,   |  . ⌘|   ⌫   ⇧|
 //                               -----------------------------          ----------------------------------
-//                                          |OPT ⌥| NUM |  ⌘  |        |  ⌘  | NAV  |SHFT ⇧|
+//                                          | NUM |SPC ␣|OPT ⌥|        |  ⌘  | NAV  |SHFT ⇧|
 //                                           -----------------          -------------------
-//                                          |BSPC⌫|SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
+//                                          | NUM |SPC ␣|SPC ␣|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
    &trans       &kp Q         &kp W         &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O          &kp P                             &trans
    &trans       &kp A         &kp S         &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L          &bhm RCTRL ESC                    &trans
    &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &bhm RGUI DOT  &bhm RSHFT BSPC                   &trans
-                              &mt LALT BSPC &mo LOWER   &kp SPACE         &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
+                                 &mo LOWER   &kp SPACE  &mt LALT BSPC        &bhm RGUI SPACE  &lt RAISE RET &mt RSHFT TAB
                         >;
                 };
                 num_layer {
@@ -115,10 +115,10 @@
 //                                                  |     |     |    |       | SPC ␣||RET ⏎| TAB ⇥|
 //                                                   ----------------         --------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none         &none                 &trans
-   &trans       &kp SLASH        &kp N4  &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE     &kp TILDE             &trans
-   &trans       &bhm LSHFT N0    &kp N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &kp COLON     &bhm RSHFT BSPC       &trans
-                                        &none   &trans   &none            &bhm RGUI SPACE  &lt MGR RET  &mt RSHFT TAB
+   &trans       &kp KP_MULTIPLY  &kp N7        &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none             &none                 &trans
+   &trans       &kp SLASH        &kp N4        &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE         &kp TILDE             &trans
+   &trans       &bhm LSHFT N0    &bhm LGUI N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &bhm RGUI COLON   &bhm RSHFT BSPC       &trans
+                                                  &none   &trans   &none            &bhm RGUI SPACE  &lt MGR RET  &mt RSHFT TAB
                         >;
                 };
 
