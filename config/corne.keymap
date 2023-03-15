@@ -26,10 +26,8 @@
  */
 
 
-#define AS(keycode) &hm LG(keycode) keycode     // Autoshift Macro
-
 &lt {
-	quick-tap-ms = <100>;
+	quick-tap-ms = <40>;
 };
 //	global-quick-tap;
 
@@ -41,7 +39,7 @@
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
                 tapping-term-ms = <275>;
-		quick-tap-ms = <50>;
+		quick-tap-ms = <40>;
 		global-quick-tap;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
@@ -50,7 +48,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HT_HP";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
+                tapping-term-ms = <150>;
                 flavor = "hold-preferred";
                 bindings = <&kp>, <&kp>;
             };
@@ -59,7 +57,7 @@
 		label = "thumb_hold";
 		#binding-cells = <2>;
 		tapping-term-ms = <200>;
-		quick-tap-ms = <150>;
+		quick-tap-ms = <80>;
 		global-quick-tap;
 		flavor = "balanced";
 		bindings = <&kp>, <&kp>;
@@ -98,17 +96,17 @@
 //                               -----------------------------          ----------------------------------
 //                              |  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U   |  I   |  O  |  P     |
 //                              |  A  |  S  |  D  |  F  |  G  |        |  H  |  J   |  K   |  L  |CTRL/ESC|
-//                              |  Z ⇧|  X ⌘|  C  |  V  |  B  |        |  N  |  M   |  ,   |  . ⌘|   ⌫   ⇧|
+//                              |  Z ⇧|  X ⌘|  C ⌥|  V  |  B  |        |  N  |  M ⌥ |  ,   |  . ⌘|   ⌫   ⇧|
 //                               -----------------------------          ----------------------------------
 //                                          | NUM |SPC ␣|OPT ⌥|        |  ⌘  | NAV  | NAV  |
 //                                           -----------------          -------------------
 //                                          | NUM |SPC ␣|OPT ⌥|        |SPC ␣| RET ⏎| TAB ⇥|
 //                                           -----------------          -------------------
                         bindings = <
-   &trans       &kp Q         &kp W         &kp E    &kp R    &kp T               &kp Y    &kp U   &kp I        &kp O          &kp P                        &trans
-   &trans       &kp A         &kp S         &kp D    &kp F    &kp G               &kp H    &kp J   &kp K        &kp L          &bhm RCTRL ESC               &trans
-   &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C    &kp V    &kp B               &kp N    &kp M   &comma_semi  &ht_dc RGUI 0  &bhm RSHFT BSPC              &trans
-                                       &mo LOWER   &kp SPACE  &kp LALT        &bhm RGUI SPACE  &lt RAISE RET &lt RAISE TAB
+   &trans       &kp Q         &kp W         &kp E      &kp R         &kp T        &kp Y    &kp U        &kp I   &kp O          &kp P                        &trans
+   &trans       &kp A         &kp S         &kp D      &kp F         &kp G        &kp H    &kp J        &kp K   &kp L          &bhm RCTRL ESC               &trans
+   &trans       &bhm LSHFT Z  &bhm LGUI X   &kp C      &bhm LALT V   &kp B        &kp N    &bhm RALT M  &comma_semi  &ht_dc RGUI 0  &bhm RSHFT BSPC              &trans
+                                            &mo LOWER  &kp SPACE     &none        &none    &lt RAISE RET &lt RAISE TAB
                         >;
                 };
                 num_layer {
@@ -123,10 +121,10 @@
 //                                                  |     |     |    |       | SPC ␣||RET ⏎| TAB ⇥|
 //                                                   ----------------         --------------------
                         bindings = <
-   &trans       &kp KP_MULTIPLY  &kp N7        &kp N8  &kp N9   &kp PLUS         &kp DLLR    &none        &none        &none             &none                 &trans
-   &trans       &kp SLASH        &kp N4        &kp N5  &kp N6   &kp MINUS        &kp SPACE   &kp DQT      &kp SQT      &kp GRAVE         &kp TILDE             &trans
-   &trans       &bhm LSHFT N0    &bhm LGUI N1  &kp N2  &kp N3   &kp EQUAL        &kp RSHFT   &kp RBKT     &kp SEMI     &bhm RGUI COLON   &bhm RSHFT BSPC       &trans
-                                                  &none   &trans   &none        &bhm RGUI SPACE  &lt MGR RET  &lt MGR TAB
+   &trans       &kp KP_MULTIPLY  &kp N7        &kp N8  &kp N9     &kp PLUS           &kp DLLR    &none            &none        &none             &none                 &trans
+   &trans       &kp SLASH        &kp N4        &kp N5  &kp N6     &kp MINUS          &kp SPACE   &kp DQT          &kp SQT      &kp GRAVE         &kp TILDE             &trans
+   &trans       &bhm LSHFT N0    &bhm LGUI N1  &kp N2  &bhm LALT N3   &kp EQUAL      &kp RSHFT   &bhm RALT RBKT   &kp SEMI     &bhm RGUI COLON   &bhm RSHFT BSPC       &trans
+                                                  &none   &trans   &none             &none       &lt MGR RET      &lt MGR TAB
                         >;
                 };
 
@@ -142,10 +140,10 @@
 //                                                | MGR |SPC ␣|SPC ␣|     |     |      |     |
 //                                                 -----------------       ------------------
                         bindings = <
-   &trans     &kp TILDE      &kp AT      &kp HASH    &kp DLLR    &kp PRCNT         &kp CARET     &kp AMPS   &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
-   &trans     &kp LT         &kp LBRC    &kp LPAR    &kp LBKT    &kp UNDER         &kp RA(MINUS) &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT                &trans
-   &trans     &bhm LSHFT GT  &kp RBRC    &kp RPAR    &kp RBKT    &kp LSHFT         &kp BSLH      &kp PIPE   &kp QMARK    &kp EXCL   &bhm RSHFT BSPC          &trans
-                                                  &mo MGR  &kp SPACE  &kp LALT    &none      &none      &none
+   &trans     &kp TILDE      &kp AT          &kp HASH    &kp DLLR        &kp PRCNT         &kp CARET     &kp AMPS        &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
+   &trans     &kp LT         &kp LBRC        &kp LPAR    &kp LBKT        &kp UNDER         &kp RA(MINUS) &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT                &trans
+   &trans     &bhm LSHFT GT  &bhm LGUI RBRC  &kp RPAR    &bhm LALT RBKT  &kp LSHFT         &kp BSLH      &bhm RBKT PIPE  &kp QMARK    &kp EXCL   &bhm RSHFT BSPC          &trans
+                                                         &mo MGR  &kp SPACE  &none         &none      &none      &none
                         >;
                 };
 
@@ -153,8 +151,8 @@
 			label = "mgr";
 //                                     --------------------------------       --------------------------------
 //                                    |       |      |     |     |     |     |BTCLR| BT1  | BT2 | BT3  | BT4  |
-//                                    |       |      |     |     |     |     |     |      |  ⏮  |  ⏯   |  ⏭   |
-//                                    |       |      |     |     |     |     |     |   +  |  -  |  +   |  -   |
+//                                    |       |      |     |     |     |     |     |   ⏮  |  ⏯  |  ⏭   |      |
+//                                    |       |      |     |     |     |     |     |   -  |  -  |  +   |      |
 //                                     --------------------------------       --------------------------------
                         bindings = <
    &trans     &none       &none          &none          &none         &none         &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2   &bt BT_SEL 3   &trans
