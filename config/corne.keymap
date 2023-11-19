@@ -132,7 +132,7 @@
 			label = "nav";
 //                                     -----------------------------       --------------------------------
 //                                    |  ~  |  @  |  #  |  $  |  %  |     |  ^  |  &   | TAB |  ⌘`  | ⌘⇧`  |
-//                                    |  _  |  (  |  )  |  [ ῀|  ]  |     |  –  | LFT  | DWN |  UP  | RGT  |
+//                                    |  (  |  )  |  [ ῀|  ]  |  _  |     |  –  | LFT  | DWN |  UP  | RGT  |
 //                                    |  ⇧  |  < ⌘|  >  |  { ι|  } `|     |  \  |  |   |  ?  |  !   | ⌫   ⇧|
 //                                     -----------------------------       --------------------------------
 //                                                | MGR |SPC ␣|OPT ⌥|     |     |      |     |
@@ -141,7 +141,7 @@
 //                                                 -----------------       ------------------
                         bindings = <
    &trans     &kp TILDE      &kp AT        &kp HASH   &kp DLLR    &kp PRCNT           &kp CARET     &kp AMPS        &kp TAB      &kp LG(GRAVE)  &kp LG(LS(GRAVE))    &trans
-   &trans     &kp UNDER      &kp LPAR      &kp RPAR   &kp LBKT    &kp RBKT            &kp RA(MINUS) &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT                &trans
+   &trans     &kp LPAR       &kp RPAR      &kp LBKT   &kp RBKT    &kp UNDER           &kp RA(MINUS) &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT                &trans
    &trans     &kp LSHFT      &bhm LGUI LT  &kp GT     &kp LBRC    &bhm LALT RBRC      &kp BSLH      &bhm RBKT PIPE  &kp QMARK    &kp EXCL   &kp RSHFT                &trans
                                                          &mo MGR  &kp SPACE  &none         &none      &none      &none
                         >;
